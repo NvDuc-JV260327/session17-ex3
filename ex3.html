@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Nền tối */
+        .modal {
+            display: none;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hộp modal */
+        .modal-content {
+            background-color: white;
+
+            width: 400px;
+
+            margin: 200px auto;
+
+            padding: 20px;
+
+            border-radius: 5px;
+
+            position: relative;
+        }
+
+        /* Nút X */
+        .close {
+            position: absolute;
+
+            right: 15px;
+            top: 10px;
+
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Modal Example</h1>
+
+    <button id="openBtn">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <p>Some text in the Modal</p>
+
+        </div>
+
+    </div>
+
+    <script src="./ex3.js"></script>
+
+</body>
+</html>
