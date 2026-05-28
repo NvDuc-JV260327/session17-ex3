@@ -3,76 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Example</title>
-
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial;
-        }
-
-        /* Nền tối */
-        .modal {
-            display: none;
-
-            position: fixed;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 100%;
-
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        /* Hộp modal */
-        .modal-content {
-            background-color: white;
-
-            width: 400px;
-
-            margin: 200px auto;
-
-            padding: 20px;
-
-            border-radius: 5px;
-
+        .container {
+            width: 600px;
+            height: 150px;
             position: relative;
+            padding: 20px;
+            border: 1px solid black;
         }
-
-        /* Nút X */
-        .close {
+        .container b {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .container div {
+            visibility: hidden;
+            width: 60%;
+            height: 35%;
             position: absolute;
-
-            right: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 55px;
+            border-radius: 4px;
+            background-color: white;
+        }
+        .container div button {
+            position: absolute;
+            right: 10px;
             top: 10px;
-
-            font-size: 25px;
-
-            cursor: pointer;
+            background-color: white;
+            border: white;
         }
     </style>
 </head>
-
 <body>
-
-    <h1>Modal Example</h1>
-
-    <button id="openBtn">Open Modal</button>
-
-    <!-- Modal -->
-    <div class="modal" id="modal">
-
-        <div class="modal-content">
-
-            <span class="close">&times;</span>
-
-            <p>Some text in the Modal</p>
-
+    <div class="container">
+        <b>Modal Example</b>
+        <button class="openModal">Open modal</button>
+        <div class="modal">
+            <span>Some text in the Modal</span>
+            <button class="close">x</button>
         </div>
-
     </div>
 
     <script src="./ex3.js"></script>
-
 </body>
 </html>
